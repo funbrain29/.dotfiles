@@ -19,3 +19,4 @@ fi
 
 export PAGER="/usr/bin/less"
 
+. "$HOME/.cargo/env"
