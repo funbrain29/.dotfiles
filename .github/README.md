@@ -34,7 +34,7 @@ You will have to go follow these links and install them to use them:
 Run the following commands to bare clone this repo, checkout this files, and install the submodules.
 
 ```bash
-git clone --bare https://github.com/rilstrats/.dotfiles.git $HOME/.dotfiles.git
+git clone --bare https://github.com/funbrain29/.dotfiles.git $HOME/.dotfiles.git
 
 /usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME checkout -f
 /usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME submodule init
