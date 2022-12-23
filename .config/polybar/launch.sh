@@ -11,7 +11,7 @@ date >> /tmp/polybar.log
 for MONITOR in $(polybar -m | sed 's/:.*$//g'); do 
     export MONITOR
 
-    if [[ $MONITOR == "eDP-1" ]]; then
+    if [[ $MONITOR == "eDP" ]]; then
       polybar laptop &>> /tmp/polybar.log & disown
 
     else
