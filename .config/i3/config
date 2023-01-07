@@ -39,8 +39,12 @@ exec_always --no-startup-id $HOME/.config/i3/wallpaper.sh
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# repeat rate
+exec_always --no-startup-id xset r rate 250 30 
+
 # transparency
 exec --no-startup-id /usr/bin/picom -b
+
 
 # gaps
 gaps inner 8

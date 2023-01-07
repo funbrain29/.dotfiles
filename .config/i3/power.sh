@@ -1,15 +1,15 @@
 #!/usr/bin/bash
 
 # timeout in minutes
-DESKTOP_SCREEN=10
-DESKTOP_SLEEP=20
-LAPTOP_SCREEN=5
-LAPTOP_SLEEP=10
+DESKTOP_SCREEN=999999
+DESKTOP_SLEEP=999999
+LAPTOP_SCREEN=999999
+LAPTOP_SLEEP=999999
 
 pkill xautolock
 pkill xss-lock
 
-if [[ ! -z $(echo $HOST | grep laptop) ]]; then
+if [[ ! -z $(echo $HOST | grep funtop) ]]; then
   SCREEN=$(( LAPTOP_SCREEN * 60 )) # converted to seconds
   SLEEP=$LAPTOP_SLEEP
 else
