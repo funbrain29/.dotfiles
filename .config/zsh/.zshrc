@@ -1,12 +1,12 @@
 # tmux
-if [[ -z "$TMUX" && "$TERM" == "alacritty" ]]; then
-  # same as tmuxh function, just didn't want to define early
-  if [[ -z $(tmux list-sessions | grep home) ]]; then
-    tmux new-session -s home -c $HOME -e TMUX_DIR=$HOME
-  else
-    tmux attach-session -t home
-  fi
-fi
+# if [[ -z "$TMUX" && "$TERM" == "alacritty" ]]; then
+# # same as tmuxh function, just didn't want to define early
+# if [[ -z $(tmux list-sessions | grep home) ]]; then
+#   tmux new-session -s home -c $HOME -e TMUX_DIR=$HOME
+# else
+#   tmux attach-session -t home
+# fi
+# fi
 
 # p10k instant prompt (output above, no output below)
 [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]] && \
@@ -43,8 +43,8 @@ if [[ "$EDITOR" == "$HOME/.local/bin/lvim" ]]; then
   vim () {[[ -z $(echo $PATH | grep nvm) ]] && nvm-setup; $EDITOR $*}
   sudovim () {[[ -z $(echo $PATH | grep nvm) ]] && nvm-setup; sudo $EDITOR $*}
 else
-  alias vim="$EDITOR"
-  alias sudovim="sudo $EDITOR"
+  vim() {$EDITOR $*}
+  sudovim() {sudo $EDITOR $*}
 fi
 
 alias tmuxer=$HOME/.local/bin/tmux-sessionizer
